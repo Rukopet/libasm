@@ -58,6 +58,5 @@ int			main(void)
 //	printf("      stdin ft_read: = |%s", buf);
 //	printf("\n");
 
-
 	return (0);
 }
