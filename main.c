@@ -16,16 +16,23 @@ int			main(void)
 	printf("%s\n", strcpy(buf, tmp));
 
 	printf("------------strcmp------------\n");
-	printf("%d\n",ft_strcmp(tmp, tmp));
-	printf("%d\n",strcmp(tmp, tmp));
+
+	printf("%d -- my\n", ft_strcmp("   1", "   2"));
+	printf("%d -- or\n", strcmp("   1", "   2"));
+
+	printf("%d -- my\n", ft_strcmp("   5", "   0"));
+	printf("%d -- or\n", strcmp("   5", "   0"));
+
+	printf("%d -- my\n", ft_strcmp(" ", " "));
+	printf("%d -- or\n", strcmp(" ", " "));
 
 	printf("------------write-------------\n");
 	printf("-------------my---------------\n");
 	ft_write(1, "hello world!\n", 13);
-	printf("%d -- %zd\n", errno, ft_write(1, "hello world!\n", -13));
-	printf("-------------st---------------\n");
 	write(1, "hello world!\n", 13);
 	printf("%d -- %zd\n", errno, write(1, "hello world!\n", -13));
+	printf("%zd -- %d\n", ft_write(1, "hello world!\n", -13), errno);
+	printf("-------------st---------------\n");
 
 	printf("------------read--------------\n");
 	printf("-------------my---------------\n");

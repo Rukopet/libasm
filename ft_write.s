@@ -3,7 +3,6 @@ extern ___error
 
 _ft_write:
 section .text
-.next:
 	mov rax, 0x2000004 ;номер системного вызова
 	syscall
 	jc .failed ; jump carry

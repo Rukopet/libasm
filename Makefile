@@ -7,7 +7,7 @@ HEADER = header.h
 all: $(NAME)
 
 $(NAME): $(OBJS) $(HEADER)
-	ar -rcs $(NAME) $(OBJS)
+	ar rc $(NAME) $?
 
 %.o: %.s $(HEADER)
 	$(CC) $< -o $@
