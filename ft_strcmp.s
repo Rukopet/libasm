@@ -16,5 +16,7 @@ section .text
 	jmp .next
 
 .ret:
+	movzx rax, al
+	movzx rbx, bl
 	sub rax, rbx
 	ret
